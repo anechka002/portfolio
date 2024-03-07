@@ -20,7 +20,7 @@ function Main() {
 
 export default Main
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   min-height: 100vh;
   background-color: #e4dbdb;
 `
