@@ -32,4 +32,8 @@ export const Button = styled.button`
     z-index: -1;
     transform: translateX(-50%);
   }
+
+  &:focus-visible {
+    outline: 1px solid ${theme.colors.accent};
+  }
 `
