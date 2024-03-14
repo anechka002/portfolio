@@ -33,6 +33,4 @@ function Works() {
 
 export default Works
 
-const StyledWorks = styled.section`
-
-`
+const StyledWorks = styled.section``
