@@ -75,14 +75,14 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
   ${font({weight: 400, Fmax: 27, Fmin: 20})}
-  /* text-align: left; */
+  text-align: left;
 `
 
 const Name = styled.h2`
   ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin: 36})}
   letter-spacing: 0.05em;
   margin: 10px 0;
-  /* text-align: left; */
+  text-align: left;
 
   span {
     position: relative;
@@ -110,5 +110,6 @@ const Name = styled.h2`
 const SmallText = styled.h2`
   font-size: 14px;
   font-weight: 400;
-  /* text-align: left; */
+  text-align: left;
+  /* margin: 15px 0; */
 `
