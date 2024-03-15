@@ -36,7 +36,6 @@ const StyledMain = styled.section`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
-  margin-top: 65px;
 
   &::before {
     content: '';
@@ -56,6 +55,10 @@ const PhotoWrapper = styled.div`
     left: 20px;
     }
   }
+
+  @media ${theme.media.mobile} {
+    margin-top: 65px;
+  }
 `
 
 const Photo = styled.img`
@@ -72,12 +75,14 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
   ${font({weight: 400, Fmax: 27, Fmin: 20})}
+  /* text-align: left; */
 `
 
 const Name = styled.h2`
   ${font({family: "'Josefin Sans', sans-serif", weight: 700, Fmax: 50, Fmin: 36})}
   letter-spacing: 0.05em;
   margin: 10px 0;
+  /* text-align: left; */
 
   span {
     position: relative;
@@ -105,4 +110,5 @@ const Name = styled.h2`
 const SmallText = styled.h2`
   font-size: 14px;
   font-weight: 400;
+  /* text-align: left; */
 `
