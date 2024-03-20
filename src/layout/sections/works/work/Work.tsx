@@ -19,7 +19,7 @@ const Work: React.FC<WorksPropsType> = (props: WorksPropsType) => {
       <S.Description>
         <S.Title>{props.title}</S.Title>
         <S.Text>{props.text}</S.Text>
-        <TabLink href={'#'}>demo</TabLink>
+        <TabLink active href={'#'}>demo</TabLink>
         <TabLink href={'#'}>code</TabLink>
       </S.Description>
     </S.Work>
