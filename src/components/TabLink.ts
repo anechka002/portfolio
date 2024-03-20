@@ -20,7 +20,6 @@ export const TabLink = styled.a`
   &::before {
     content: '';
     display: inline-block;
-    /* height: 10px; */
     background-color: ${theme.colors.accent};
 
     position: absolute;

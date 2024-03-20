@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon from '../icon/Icon'
 
-function Logo() {
+const Logo: React.FC = () => {
   return (
     <a href="">
       <Icon iconId={'code'}/>
@@ -9,6 +9,4 @@ function Logo() {
   )
 }
 
-export default Logo
-
-
+export default Logo;

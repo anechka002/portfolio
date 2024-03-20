@@ -1,44 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
 import { TabLink } from '../../../../components/TabLink';
+import {S} from '../Works_Styles'
 
 type TabMenuPropsType = {
   menuItems: Array<string>
 }
 
-function TabMenu(props: TabMenuPropsType) {
+const TabMenu:React.FC<TabMenuPropsType> = (props: TabMenuPropsType) => {
   return (
-    <StyledMenu>
+    <S.Menu>
       <ul>
 
         {props.menuItems.map((item, id) => {
-          return <ListItem key={id}>
+          return <S.ListItem key={id}>
           <TabLink href="">{item}</TabLink>
-        </ListItem>
+        </S.ListItem>
         })}
 
       </ul>
-    </StyledMenu>
+    </S.Menu>
   );
 }
 
 export default TabMenu;
-
-const StyledMenu = styled.nav`
-  /* margin-bottom: 40px; */
-
-  ul {
-    display: flex;
-    /* gap: 20px; */
-    border: 1px solid red;
-    justify-content: space-between;
-    max-width: 352px;
-    width: 100%;
-    margin: 0 auto 40px;
-  }
-`
-
-const ListItem = styled.li`
-  
-`
-
