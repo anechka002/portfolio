@@ -32,4 +32,5 @@ const StyledTestimony = styled.section`
     margin: 40px 0 72px;
   }
   
+  position: relative;
 `
