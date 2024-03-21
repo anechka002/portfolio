@@ -51,6 +51,10 @@ const Photo = styled.img`
 const MainTitle = styled.h1`
   ${font({weight: 400, Fmax: 27, Fmin: 20})}
   text-align: left;
+
+  p {
+    display: none;
+  }
 `
 
 const Name = styled.h2`
