@@ -7,6 +7,7 @@ import timer from './../../../assets/images/proj-2.png'
 import { Container } from '../../../components/Container'
 import TabMenu, { TabStatusItems } from './tabMenu/TabMenu'
 import {S} from './Works_Styles';
+import { AnimatePresence, motion } from "framer-motion";
 
 const tabsItems:TabStatusItems[]  = [
   {
@@ -32,13 +33,15 @@ const worksData = [
     src: socialImg,
     title: 'Social Network',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    type: 'spa'
+    type: 'spa',
+    id: 1
   },
   {
     src: timer,
     title: 'Timer',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim',
-    type: 'react'
+    type: 'react',
+    id: 2
   },
 ]
 
@@ -71,12 +74,25 @@ const Works: React.FC = () => {
                   currentFilterStatus={currentFilterStatus}/>
         <FlexWrapper justify='space-between' align='flex-start' wrap='wrap'>
 
-          {filteredWorks.map((w, index) => {
-            return <Work key={index}
+          <AnimatePresence>
+            {filteredWorks.map((w) => {
+              return (
+                <motion.div style={{width: '400px', flexGrow: 1, maxWidth: '540px'}}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  key={w.id}
+                >
+                  <Work key={w.id}
                         src={w.src} 
                         title={w.title} 
-                        text={w.text}/>
-          })}
+                        text={w.text}
+                  />
+                </motion.div>
+              ) 
+            })}
+          </AnimatePresence>
 
         </FlexWrapper>
       </Container>
