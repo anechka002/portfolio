@@ -42,7 +42,8 @@ const ImgWrapper = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
+    transition: ${theme.animations.transition};
 
     &::before {
       width: 100%;
@@ -60,6 +61,7 @@ const ImgWrapper = styled.div`
       backdrop-filter: blur(4px);
       background: rgba(0, 0, 0, 0.3);
       opacity: 0;
+      transition: ${theme.animations.transition};
     }
 
   &:hover {
@@ -69,6 +71,7 @@ const ImgWrapper = styled.div`
 
     ${Button} {
       opacity: 1;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -105,7 +108,6 @@ const Menu = styled.nav`
 
   ul {
     display: flex;
-    border: 1px solid red;
     justify-content: space-between;
     max-width: 352px;
     width: 100%;

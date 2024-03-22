@@ -15,8 +15,8 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow: hidden;
-  /* outline: 1px solid red; */
   color: ${theme.colors.accent};
+  transition: ${theme.animations.transition};
 
   & + & {
     top: 50%;
@@ -45,6 +45,7 @@ const NavLink = styled(Link)`
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: ${theme.animations.transition};
   }
 
   &:hover, &.active {
@@ -76,23 +77,32 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   z-index: 1000;
   background-color: rgba(31, 31, 32, 0.9);
-  display: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 1s ease-in-out;
+
+  
+
+  ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s ease-in-out;
+  }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      transform: translateY(0);
+      & ul {
+        gap: 40px;
+      }
     `}
-
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
