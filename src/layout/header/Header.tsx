@@ -6,12 +6,6 @@ import MobileMenu from './headerMenu/mobileMenu/MobileMenu';
 import { S } from './Header_Styles';
 import DesktopMenu from './headerMenu/desktopMenu/DesktopMenu';
 
-const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact'];
-
-export type HeaderMenuPropsType = {
-  menuItems: Array<string>;
-};
-
 const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
@@ -29,9 +23,9 @@ const Header: React.FC = () => {
           <Logo />
 
           {width < breakpoint ? (
-            <MobileMenu menuItems={items} />
+            <MobileMenu />
           ) : (
-            <DesktopMenu menuItems={items} />
+            <DesktopMenu />
           )}
         </FlexWrapper>
       </Container>

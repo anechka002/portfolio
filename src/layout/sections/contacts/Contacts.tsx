@@ -6,7 +6,7 @@ import {S} from './Contacts_Styles'
 
 const Contact:React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id='contact'>
       <Container>
         <SectionTitle>Contact</SectionTitle>
         <S.Form>
