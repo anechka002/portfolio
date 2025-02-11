@@ -1,9 +1,16 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { FlexWrapper } from "../../../components/FlexWrapper";
 
 // Skills
 
 const Skills = styled.section`
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      justify-content: center;
+    } 
+  }
+
   position: relative;
 `
 

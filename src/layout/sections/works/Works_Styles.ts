@@ -9,6 +9,10 @@ import { TabLink } from "../../../components/TabLink";
 const Works = styled.section`
   ${FlexWrapper} {
     gap: 30px;
+    @media ${theme.media.tablet} {
+      /* max-width: 860px; */
+      justify-content: center;
+    } 
   }
   
   position: relative;
