@@ -5,16 +5,20 @@ import {S} from './Footer_Styles'
 
 const socialItemsData = [
   {
-    iconId: 'instagram'
+    iconId: 'instagram',
+    link: 'https://www.instagram.com/anechka_ost?igsh=YzhwdzZrZWdxM2d3&utm_source=qr',
   },
   {
-    iconId: 'telegram'
+    iconId: 'telegram',
+    link: 'https://telegram.me/@Anna_Blinova',
   },
   {
-    iconId: 'vk'
+    iconId: 'vk',
+    link: '',
   },
   {
-    iconId: 'linkedin'
+    iconId: 'linkedin',
+    link: 'https://www.linkedin.com/in/anna-blinova-4540b7346/',
   },
 ]
 
@@ -22,13 +26,13 @@ const Footer: React.FC = () => {
   return (
     <S.Footer>
       <FlexWrapper direction={'column'} align={'center'}>
-        <S.Name>Svetlana</S.Name>
+        <S.Name>Anna</S.Name>
         <S.SocialList>
 
           {socialItemsData.map((s, index)=>{
             return (
               <S.SocialItem key={index}>
-                <S.SocialLink>
+                <S.SocialLink href={s.link} target="_blank" rel="noopener noreferrer">
                   <Icon width={'21'} height={'21'} viewBox={'0 0 21 21'} iconId={s.iconId}/>
                 </S.SocialLink>
               </S.SocialItem>
@@ -36,7 +40,7 @@ const Footer: React.FC = () => {
           })}
 
         </S.SocialList>
-        <S.Copyright>© 2024 Svetlana Dyablo, All Rights Reserved.</S.Copyright>
+        <S.Copyright>© 2025 Anna Blinova, All Rights Reserved.</S.Copyright>
       </FlexWrapper>
     </S.Footer>
   )

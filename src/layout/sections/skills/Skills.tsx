@@ -10,32 +10,32 @@ const skillData = [
   {
     iconId: 'code',
     title: 'html5',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Cтандартный язык разметки, используемый для создания веб-страниц. Семантическая, кроссбраузерная, адаптивная верстка.'
   },
   {
     iconId: 'css',
     title: 'css3',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Язык стилевой разметки, используемый для описания внешнего вида и форматирования документов, написанных на HTML и XML. Именование классов по методологии БЭМ, css модули'
   },
   {
     iconId: 'react',
     title: 'React',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Библиотека для создания пользовательских интерфейсов. Позволяет строить многокомпонентные приложения, обеспечивая быструю и эффективную работу с динамическими данными.'
   },
   {
     iconId: 'typescript',
     title: 'typescript',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Язык программирования, который является надстройкой над JavaScript. Он добавляет статическую типизацию, что делает разработку более предсказуемой и менее подверженной ошибкам.'
   },
   {
     iconId: 'styled-components',
     title: 'styled components',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Библиотека для стилизации компонентов в приложениях, разработанных на React и других библиотеках, использующих JavaScript. Она использует подход CSS-in-JS, позволяя писать CSS прямо внутри JavaScript-кода. '
   },
   {
     iconId: 'figma',
     title: 'WEB DESIgN',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim'
+    description: 'Figma — это облачный инструмент для дизайна пользовательских интерфейсов и прототипирования, который позволяет командам совместно работать над проектами в реальном времени.'
   },
 ]
 

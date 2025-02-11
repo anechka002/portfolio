@@ -6,6 +6,7 @@ import {S} from '../Works_Styles'
 type WorksPropsType = {
   title: string
   text: string
+  techno: string
   src: string
 }
 
@@ -14,13 +15,16 @@ const Work: React.FC<WorksPropsType> = (props: WorksPropsType) => {
     <S.Work>
       <S.ImgWrapper>
         <S.Image src={props.src} alt="" />
-        <Button>view project</Button>
+        <Button as='a' href='https://todolist-one-sooty.vercel.app' target='_blank' rel='noopener noreferrer'>
+          view project
+        </Button>
       </S.ImgWrapper>
       <S.Description>
         <S.Title>{props.title}</S.Title>
         <S.Text>{props.text}</S.Text>
+        <S.Text>{props.techno}</S.Text>
         <TabLink active href={'#'}>demo</TabLink>
-        <TabLink href={'#'}>code</TabLink>
+        <TabLink href={'https://github.com/anechka002/todolist'} target='_blank' rel='noopener noreferrer'>code</TabLink>
       </S.Description>
     </S.Work>
   )

@@ -12,6 +12,10 @@ export const Button = styled.button`
   position: relative;
   z-index: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     &::before {
       width: 100%;

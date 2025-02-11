@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import Work from './work/Work'
-import socialImg from './../../../assets/images/prog-1.png'
+import todoImg from './../../../assets/images/To-Do-List.png'
 import timer from './../../../assets/images/proj-2.png'
 import { Container } from '../../../components/Container'
 import TabMenu, { TabStatusItems } from './tabMenu/TabMenu'
@@ -30,23 +30,26 @@ const tabsItems:TabStatusItems[]  = [
 
 const worksData = [
   {
-    src: socialImg,
-    title: 'Social Network',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    type: 'spa',
+    src: todoImg,
+    title: 'Todo List',
+    text: "Основные функции проекта To-Do List: Создание задач. Редактирование задач. Удаление задач. Отметка задач как выполненных. Фильтрация задач. Сохранение данных",
+    techno: 'Использованные технологии: React, RTK query, CSS/MUI',
+    type: 'react',
     id: 1
   },
   {
     src: timer,
     title: 'Timer',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim',
-    type: 'react',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim  Реализовано: авторизация в приложении редактирование профиля переписка с другими пользователями переход по страницам пользователей подписка и отписка от пользователей добавление постов Технологии: React, Redux' ,
+    techno: '',
+    type: 'spa',
     id: 2
   },
 ]
 
 const Works: React.FC = () => {
   const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
+
   let filteredWorks = worksData
 
   if (currentFilterStatus === 'landing') {
@@ -88,6 +91,7 @@ const Works: React.FC = () => {
                         src={w.src} 
                         title={w.title} 
                         text={w.text}
+                        techno={w.techno}
                   />
                 </motion.div>
               ) 
