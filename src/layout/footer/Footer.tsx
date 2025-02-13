@@ -6,19 +6,19 @@ import {S} from './Footer_Styles'
 const socialItemsData = [
   {
     iconId: 'instagram',
-    link: 'https://www.instagram.com/anechka_ost?igsh=YzhwdzZrZWdxM2d3&utm_source=qr',
+    link: 'https://www.instagram.com/anechka_ost',
   },
   {
     iconId: 'telegram',
-    link: 'https://telegram.me/@Anna_Blinova',
+    link: 'https://t.me/Anna_Blinova'
   },
   {
     iconId: 'vk',
-    link: '',
+    link: 'https://vk.com/ostrovskaya86',
   },
   {
     iconId: 'linkedin',
-    link: 'https://www.linkedin.com/in/anna-blinova-4540b7346/',
+    link: 'https://www.linkedin.com/in/anna-blinova-4540b7346',
   },
 ]
 
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           })}
 
         </S.SocialList>
-        <S.Copyright>© 2025 Anna Blinova, All Rights Reserved.</S.Copyright>
+        <S.Copyright>© 2024-2025 Anna Blinova, All Rights Reserved.</S.Copyright>
       </FlexWrapper>
     </S.Footer>
   )

@@ -3,7 +3,8 @@ import { SectionTitle } from '../../../components/SectionTitle'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import Work from './work/Work'
 import todoImg from './../../../assets/images/To-Do-List.png'
-import timer from './../../../assets/images/proj-2.png'
+import design from './../../../assets/images/design.png'
+import counter from './../../../assets/images/counter.webp'
 import { Container } from '../../../components/Container'
 import TabMenu, { TabStatusItems } from './tabMenu/TabMenu'
 import {S} from './Works_Styles';
@@ -30,20 +31,34 @@ const tabsItems:TabStatusItems[]  = [
 
 const worksData = [
   {
+    id: 1,
     src: todoImg,
     title: 'Todo List',
     text: "Основные функции проекта To-Do List: Создание задач. Редактирование задач. Удаление задач. Отметка задач как выполненных. Фильтрация задач. Сохранение данных",
-    techno: 'Использованные технологии: React, RTK query, CSS/MUI',
+    techno: 'Технологии: React, RTK query, CSS/MUI',
     type: 'react',
-    id: 1
+    linkGit: 'https://github.com/anechka002/todolist',
+    link: 'https://todolist-one-sooty.vercel.app'
   },
   {
-    src: timer,
-    title: 'Timer',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim  Реализовано: авторизация в приложении редактирование профиля переписка с другими пользователями переход по страницам пользователей подписка и отписка от пользователей добавление постов Технологии: React, Redux' ,
-    techno: '',
+    id: 2,
+    src: design,
+    title: 'Portfolio',
+    text: 'Основные функции проекта: Сетка на flexbox. Семантическая, кроссбраузерная, адаптивная верстка. Именование классов по методологии БЭМ. SASS (импорт файлов, вложенные селекторы, переменные, миксины). Использование анимации (animation, transition). Работа с svg изображениями и svg спрайтами. ' ,
+    techno: 'Технологии: React, CSS/Styled Components',
+    type: 'landing',
+    linkGit: 'https://github.com/anechka002/portfolio-designer',
+    link: 'https://anechka002.github.io/portfolio-designer/'
+  },
+  {
+    id: 2,
+    src: counter,
+    title: 'Count',
+    text: 'Основные функции проекта: Увеличение счетчика. Уменьшение счетчика. Сброс счетчика. Отображение текущего значения счетчика. Настройка начального значения. Ограничение значений. Интерфейс пользователя.' ,
+    techno: 'Технологии: React, Redux',
     type: 'spa',
-    id: 2
+    linkGit: 'https://github.com/anechka002/counter02',
+    link: 'https://counter02.vercel.app/'
   },
 ]
 
@@ -92,6 +107,8 @@ const Works: React.FC = () => {
                         title={w.title} 
                         text={w.text}
                         techno={w.techno}
+                        linkGit={w.linkGit}
+                        link={w.link}
                   />
                 </motion.div>
               ) 
